@@ -1,0 +1,246 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2487.5">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;Allergic Rhinitis Self-Assessment Questionnaire&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>/* Styling for the entire page */</p>
+<p class="p1"><span class="Apple-converted-space">        </span>body, html {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin: 0;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>font-family: Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.wrapper {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>min-height: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.left-column, .right-column {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 20px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-sizing: border-box;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.left-column {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-right: 2px solid #000;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.right-column {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex-direction: column;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-header, .chat-input, .chat-input-container, button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-header {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-bottom: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-box {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>flex: 1;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>overflow-y: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border: 1px solid #ccc;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-bottom: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-input-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>display: flex;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-top: auto;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chat-input {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-right: 10px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.right-button {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>padding: 10px 20px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="wrapper"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="left-column"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h3&gt;Allergic Rhinitis Self-Assessment Questionnaire&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Introduction&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;p&gt;Please answer the following questions to help assess your allergic rhinitis symptoms and their impact on your daily life. This questionnaire is based on the &lt;a href="https://aao-hnsfjournals.onlinelibrary.wiley.com/doi/epdf/10.1177/0194599814561600" download="CPG-Allergic-Rhinitis.pdf"&gt; Clinical Practice Guidelines (CPG) for Allergic Rhinitis.&lt;/a&gt;&lt;/p&gt;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;h4&gt;Questions&lt;/h4&gt;</p>
+<p class="p2"><span class="Apple-converted-space">      </span></p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;!-- All the questionnaire HTML content goes here... --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;form id="allergySurvey"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Existing questions here... --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- ... --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;!-- Question 1 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;1. Frequency of Symptoms&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;“How often do you experience symptoms of allergic rhinitis?”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="frequency1" name="frequency" value="almost-daily"&gt;&lt;label for="frequency1"&gt;Almost daily&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="frequency2" name="frequency" value="more-than-once-week-not-daily"&gt;&lt;label for="frequency2"&gt;More than once a week but not daily&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="frequency3" name="frequency" value="once-week-or-less"&gt;&lt;label for="frequency3"&gt;Once a week or less&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Question 2 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;2. Duration of Symptoms&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;“How long do your symptoms last?”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="duration1" name="duration" value="more-than-4-hours"&gt;&lt;label for="duration1"&gt;More than 4 hours per day&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="duration2" name="duration" value="less-than-4-hours"&gt;&lt;label for="duration2"&gt;Less than 4 hours per day&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Question 3 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;3. Symptoms Experienced&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;“Which of the following symptoms do you experience? (Select all that apply)”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="checkbox" id="symptom1" name="symptoms" value="sneezing"&gt;&lt;label for="symptom1"&gt;Sneezing&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="checkbox" id="symptom2" name="symptoms" value="itchy-nose"&gt;&lt;label for="symptom2"&gt;Itchy nose&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="checkbox" id="symptom3" name="symptoms" value="runny-nose"&gt;&lt;label for="symptom3"&gt;Runny nose&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="checkbox" id="symptom4" name="symptoms" value="blocked-nose"&gt;&lt;label for="symptom4"&gt;Blocked nose&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="checkbox" id="symptom5" name="symptoms" value="itchy-eyes"&gt;&lt;label for="symptom5"&gt;Itchy, red, or watery eyes&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Question 4 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;4. Impact on Daily Activities&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;“To what extent do your symptoms affect your daily activities?”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="impact-daily1" name="impact-daily" value="not-at-all"&gt;&lt;label for="impact-daily1"&gt;Not at all&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="impact-daily2" name="impact-daily" value="a-little"&gt;&lt;label for="impact-daily2"&gt;A little&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="impact-daily3" name="impact-daily" value="a-lot"&gt;&lt;label for="impact-daily3"&gt;A lot&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Question 5 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;5. Impact on Sleep&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;“Do your symptoms affect your sleep?”&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="impact-sleep1" name="impact-sleep" value="yes"&gt;&lt;label for="impact-sleep1"&gt;Yes&lt;/label&gt;&lt;br&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="radio" id="impact-sleep2" name="impact-sleep" value="no"&gt;&lt;label for="impact-sleep2"&gt;No&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Questions 6-10 with sliders --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Add additional slider questions here --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;6. Severity of Symptoms&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;"On a scale of 0 to 10, rate the average severity of your symptoms over the past week."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="range" id="severity" name="severity" min="0" max="10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label for="severity" class="slider-label"&gt;0 (no symptoms) to 10 (extremely severe)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;7. Impact on Daily Activities (Detailed)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;"On a scale of 0 to 10, rate how much your symptoms have impacted your daily activities over the past week."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="range" id="dailyImpact" name="dailyImpact" min="0" max="10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label for="dailyImpact" class="slider-label"&gt;0 (no impact) to 10 (severe impact)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;8. Confidence in Managing Symptoms&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;"On a scale of 0 to 10, rate your confidence in managing your allergic rhinitis symptoms."&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="range" id="confidence" name="confidence" min="0" max="10"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;label for="confidence" class="slider-label"&gt;0 (not confident at all) to 10 (very confident)&lt;/label&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Additional new slider questions can be added here following the same format --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;9. Severity of Symptoms (Over Time)&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;"On a scale from 0 to 10, how would you rate the change in severity of your symptoms over time?"&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="range" id="severityOverTime" name="severityOverTime" min="0" max="10" oninput="document.getElementById('severityOverTimeValue').textContent = this.value;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span id="severityOverTimeValue"&gt;5&lt;/span&gt;/10</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;!-- Corrected Question 10 --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div class="question"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;10. Satisfaction with Treatment&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;p&gt;"On a scale from 0 to 10, how satisfied are you with your current allergy treatment?"&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;input type="range" id="treatmentSatisfaction" name="treatmentSatisfaction" min="0" max="10" oninput="document.getElementById('treatmentSatisfactionValue').textContent = this.value;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                  </span>&lt;span id="treatmentSatisfactionValue"&gt;5&lt;/span&gt;/10</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt; <span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;input type="submit" value="Submit"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;div style="margin-top: 30px; text-align: left;"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;span&gt;Go to page: &lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="page1.html"&gt;1&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="page2.html"&gt;2&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="page3.html"&gt;3&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Add more pages as needed --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/form&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="right-column"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="chat-header"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h4&gt;Chat with our Digital Assistant&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;Get guidance through your self-assessment. If you're uncertain about a question, just ask!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;em&gt;Note: This tool does not provide medical advice. It is intended for informational purposes only. It is not a substitute for professional medical advice, diagnosis or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition.&lt;/em&gt;&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="chat-box" id="chat-box"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Hi, I'm here to assist you! Let's start with a simple question: How are you feeling today?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Hi! I've been feeling some discomfort due to my allergies.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; I'm sorry to hear that. Are you experiencing symptoms of allergic rhinitis?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Yes, exactly. I've got a runny nose, sneezing, and my eyes won't stop itching.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Those are common symptoms of allergic rhinitis. Have you identified what you're allergic to?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; I think it might be pollen, but I'm not entirely sure.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; It's quite common during this season. I recommend keeping windows closed to avoid pollen, using air purifiers, and considering over-the-counter antihistamines. However, it's best to consult with a healthcare professional for personalized advice.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Thank you for the advice, I will consider seeing a specialist.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;!-- Additional dialogue added below --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; That sounds like a good plan. Also, tracking your symptoms might help you manage them better. Do you keep a record of when you experience these symptoms?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Not really, but it sounds like something I should start doing.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Yes, it can be very helpful. There are even apps available that can help you track your symptoms and potential triggers. Have you tried any such apps?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; No, I haven't, but I'm willing to try if you think it could help.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Definitely. It can provide insights and patterns to you and your healthcare provider. Aside from this, are there any particular activities that tend to aggravate your symptoms?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Yes, cleaning my house seems to stir up a lot of dust and makes things worse.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Dust can be a significant irritant. Using a damp cloth to clean and wearing a dust mask may help reduce your exposure. What steps have you taken to make your home allergen-friendly?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; I haven't done much aside from using an air purifier. Do you have any other suggestions?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; In addition to continued use of an air purifier, consider using allergen-proof mattress and pillow case covers to protect against dust mites, removing carpets if possible, and using a vacuum cleaner with a HEPA filter regularly.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; These sound like useful tips, thank you. I'll try to implement these changes at home.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Have you ever had an allergy skin test done by a healthcare professional?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; No, I haven't. What does that involve?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; An allergy skin test can help to identify specific allergens that trigger your symptoms. It's a simple procedure where small amounts of common allergens are applied to your skin.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; That sounds useful. I'll ask my doctor about it next time I go for a check-up.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; Good idea! In the meantime, have you taken any steps to reduce exposure to allergens outside of your home?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Not specifically. I try to avoid going outside when the pollen count is high, though.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; That's a smart move. Checking daily pollen forecasts and staying indoors during peak times can certainly help. Also, wearing sunglasses and a hat can reduce pollen getting into your eyes and hair.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; I'd never thought of that. Thanks for the tip!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; You're welcome! Do you take any medications when your symptoms flare up?&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; I'll have to look into that option. Thanks for all the help and information, ChatBot!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;ChatBot:&lt;/strong&gt; You're very welcome! Remember, I'm here whenever you need guidance. Take care!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; Will do, bye!&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="text" class="chat-input" id="chat-input" placeholder="Type your message here..." /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="sendMessage()"&gt;Send&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="sendMessage()" class="right-button"&gt;Submit&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function sendMessage() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var input = document.getElementById('chat-input');</p>
+<p class="p1"><span class="Apple-converted-space">            </span>var message = input.value.trim();</p>
+<p class="p1"><span class="Apple-converted-space">            </span>if (message !== "") {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>var chatBox = document.getElementById('chat-box');</p>
+<p class="p1"><span class="Apple-converted-space">                </span>chatBox.innerHTML += '&lt;p&gt;&lt;strong&gt;You:&lt;/strong&gt; ' + message + '&lt;/p&gt;';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>input.value = '';</p>
+<p class="p1"><span class="Apple-converted-space">                </span>chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom of the chat box</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function sendSubmit() {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>// Placeholder for the submit button functionality</p>
+<p class="p1"><span class="Apple-converted-space">            </span>alert('Submit button clicked!');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
