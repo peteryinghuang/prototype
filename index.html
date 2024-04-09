@@ -123,35 +123,7 @@
                   <label for="severity" class="slider-label">0 (no symptoms) to 10 (extremely severe)</label>
               </div>
     
-              <div class="question">
-                  <p>7. Impact on Daily Activities (Detailed)</p>
-                  <p>"On a scale of 0 to 10, rate how much your symptoms have impacted your daily activities over the past week."</p>
-                  <input type="range" id="dailyImpact" name="dailyImpact" min="0" max="10">
-                  <label for="dailyImpact" class="slider-label">0 (no impact) to 10 (severe impact)</label>
-              </div>
-    
-              <div class="question">
-                  <p>8. Confidence in Managing Symptoms</p>
-                  <p>"On a scale of 0 to 10, rate your confidence in managing your allergic rhinitis symptoms."</p>
-                  <input type="range" id="confidence" name="confidence" min="0" max="10">
-                  <label for="confidence" class="slider-label">0 (not confident at all) to 10 (very confident)</label>
-              </div>
-    
-              <!-- Additional new slider questions can be added here following the same format -->
-              <div class="question">
-                  <p>9. Severity of Symptoms (Over Time)</p>
-                  <p>"On a scale from 0 to 10, how would you rate the change in severity of your symptoms over time?"</p>
-                  <input type="range" id="severityOverTime" name="severityOverTime" min="0" max="10" oninput="document.getElementById('severityOverTimeValue').textContent = this.value;">
-                  <span id="severityOverTimeValue">5</span>/10
-              </div>
-    
-              <!-- Corrected Question 10 -->
-              <div class="question">
-                  <p>10. Satisfaction with Treatment</p>
-                  <p>"On a scale from 0 to 10, how satisfied are you with your current allergy treatment?"</p>
-                  <input type="range" id="treatmentSatisfaction" name="treatmentSatisfaction" min="0" max="10" oninput="document.getElementById('treatmentSatisfactionValue').textContent = this.value;">
-                  <span id="treatmentSatisfactionValue">5</span>/10
-              </div>  
+             
               <input type="submit" value="Submit">
     
               <div style="margin-top: 30px; text-align: left;">
