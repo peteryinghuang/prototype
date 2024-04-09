@@ -8,12 +8,24 @@
     <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
+        body {
+            background-color: #f4f4f4; /* Light gray background */
+        }
+        .header {
+            background-color: #4CAF50; /* Green background for header */
+            color: white; /* White text color */
+            padding: 10px 0; /* Some padding */
+        }
+        .header h1, .header p {
+            color: white; /* Ensuring text is white for visibility */
+        }
         .module-entry {
             margin-top: 20px;
             text-align: center;
         }
         .module-entry h3 {
             margin-top: 10px;
+            color: #4CAF50; /* Green text for module headings */
         }
         .module-entry img {
             max-width: 100%;
@@ -21,61 +33,70 @@
             border-radius: 8px; /* Optional: for rounded corners */
         }
         .footer-links {
+            background-color: #4CAF50; /* Green background for footer */
+            color: white; /* White text color */
+            padding: 10px 0; /* Some padding */
             margin-top: 40px;
             text-align: center;
         }
         .footer-links a {
+            color: white; /* White text color */
             margin: 0 10px;
+            text-decoration: none; /* Removes underline from links */
+        }
+        .footer-links a:hover {
+            color: #ddf; /* Lighter shade for hover effect */
+            text-decoration: underline; /* Underline on hover for links */
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="container-fluid">
         <!-- Header -->
-        <div class="row justify-content-center">
-            <div class="col-12 text-center">
-                <h1>AllerTrack</h1>
-                <p>Focused on the management and treatment of allergic rhinitis</p>
-            </div>
+        <div class="header text-center">
+            <h1>AllerTrack</h1>
+            <p>Focused on the management and treatment of allergic rhinitis</p>
         </div>
 
         <!-- Module Entries -->
-        <div class="row">
-            <!-- Self-Assessment Tool -->
-            <div class="col-md-4 module-entry">
-                <img src="https://github.com/peteryinghuang/prototype/blob/main/self-assessment.jpg?raw=true" class="img-fluid" alt="Self-Assessment">
-                <h3>Self-Assessment Tool</h3>
-            </div>
+        <div class="container mt-5">
+            <div class="row justify-content-center">
+                <!-- Self-Assessment Tool -->
+                <div class="col-md-4 module-entry">
+                    <img src="https://github.com/peteryinghuang/prototype/blob/main/self-assessment.jpg?raw=true" class="img-fluid" alt="Self-Assessment">
+                    <h3>Self-Assessment Tool</h3>
+                </div>
 
-            <!-- Symptom Tracking -->
-            <div class="col-md-4 module-entry">
-                <img src="https://github.com/peteryinghuang/prototype/blob/main/SymptomTracking.jpg?raw=true" class="img-fluid" alt="Symptom Tracking">
-                <h3>Symptom Tracking</h3>
-            </div>
+                <!-- Symptom Tracking -->
+                <div class="col-md-4 module-entry">
+                    <img src="https://github.com/peteryinghuang/prototype/blob/main/SymptomTracking.jpg?raw=true" class="img-fluid" alt="Symptom Tracking">
+                    <h3>Symptom Tracking</h3>
+                </div>
 
-            <!-- Doctor Portal -->
-            <div class="col-md-4 module-entry">
-                <img src="https://github.com/peteryinghuang/prototype/blob/main/doctorportal.jpg?raw=true" class="img-fluid" alt="Doctor Portal">
-                <h3>Doctor Portal</h3>
-            </div>
+                <!-- Doctor Portal -->
+                <div class="col-md-4 module-entry">
+                    <img src="https://github.com/peteryinghuang/prototype/blob/main/doctorportal.jpg?raw=true" class="img-fluid" alt="Doctor Portal">
+                    <h3>Doctor Portal</h3>
+                </div>
 
-            <!-- Knowledge Base -->
-            <div class="col-md-4 module-entry">
-                <img src="https://github.com/peteryinghuang/prototype/blob/main/KnowledgeBase.jpg?raw=true" class="img-fluid" alt="Knowledge Base">
-                <h3>Knowledge Base</h3>
-            </div>
+                <!-- Knowledge Base -->
+                <div class="col-md-4 module-entry">
+                    <img src="https://github.com/peteryinghuang/prototype/blob/main/KnowledgeBase.jpg?raw=true" class="img-fluid" alt="Knowledge Base">
+                    <h3>Knowledge Base</h3>
+                </div>
 
-            <!-- Community Forum -->
-            <div class="col-md-4 module-entry">
-                <img src="https://github.com/peteryinghuang/prototype/blob/main/forum.jpg?raw=true" class="img-fluid" alt="Community Forum">
-                <h3>Community Forum</h3>
+                <!-- Community Forum -->
+                <div class="col-md-4 module-entry">
+                    <img src="https://github.com/peteryinghuang/prototype/blob/main/forum.jpg?raw=true" class="img-fluid" alt="Community Forum">
+                    <h3>Community Forum</h3>
+                </div>
             </div>
         </div>
 
         <!-- Footer Links -->
         <div class="footer-links">
-            <a href="#">Contact Us</a>
-            <a href="#">Terms of Service</a>
+            <a href="#">Contact Us</a> | 
+            <a href="#">Terms of Service</a> | 
             <a href="#">Privacy Policy</a>
         </div>
     </div>
