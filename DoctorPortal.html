@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Portal - Allergic Rhinitis CPG Workflow</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #ecf0f1;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .workflow-image {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-top: 30px;
+        }
+        .treatment-plan, .patient-list {
+            background-color: #fff;
+            border: 1px solid #ccc;
+            padding: 15px;
+            margin-top: 30px;
+        }
+        .treatment-plan h2, .patient-list h2 {
+            color: #2c3e50;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Doctor Portal - Allergic Rhinitis CPG Workflow</h1>
+
+        <div id="patientForm">
+            <h2>Patient Information</h2>
+            <label for="patientName">Patient Name:</label>
+            <input type="text" id="patientName" value="John Doe">
+            
+            <label for="symptoms">Symptoms:</label>
+            <select id="symptoms">
+                <option value="sneezing">Sneezing</option>
+                <option value="nasalCongestion" selected>Nasal Congestion</option>
+                <!-- Add other symptoms as needed -->
+            </select>
+            
+            <label for="conditions">Comorbid Conditions:</label>
+            <select id="conditions">
+                <option value="asthma" selected>Asthma</option>
+                <!-- Add other conditions as needed -->
+            </select>
+            
+            <button onclick="submitPatientData()">Submit Patient Data</button>
+        </div>
+
+        <div id="patientList" class="patient-list">
+            <h2>Sample Patient List</h2>
+            <table>
+                <tr>
+                    <th>Name</th>
+                    <th>Symptoms</th>
+                    <th>Conditions</th>
+                </tr>
+                <!-- Sample Patient Data -->
+                <!-- Repeat similar <tr> tags for each patient -->
+                <tr>
+                    <td>Jane Smith</td>
+                    <td>Runny Nose, Sneezing</td>
+                    <td>None</td>
+                </tr>
+                <!-- Add more sample patients here -->
+                 <!-- Add more patients below -->
+                <tr><td>Alice Johnson</td><td>Runny Nose, Sneezing</td><td>-</td></tr>
+                <tr><td>Bob Smith</td><td>Nasal Congestion</td><td>Eczema</td></tr>
+                <tr><td>Carol White</td><td>Coughing, Itchy Eyes</td><td>-</td></tr>
+                <tr><td>David Brown</td><td>Sneezing, Headache</td><td>-</td></tr>
+                <tr><td>Emily Davis</td><td>Itchy Eyes, Fatigue</td><td>-</td></tr>
+                <tr><td>Frank Moore</td><td>Nasal Congestion, Sneezing</td><td>Asthma</td></tr>
+                <tr><td>Grace Lee</td><td>Runny Nose</td><td>-</td></tr>
+                <tr><td>Henry Wilson</td><td>Sneezing, Coughing</td><td>Chronic Bronchitis</td></tr>
+                <!-- Continue adding patients as needed -->
+            </table>
+        </div>
+
+        <div id="treatmentPlan" class="treatment-plan">
+            <h2>Treatment Plan</h2>
+            <!-- The treatment plan will be displayed here after patient data is submitted -->
+        </div>
+
+        <!-- Responsive Clinical Workflow Diagram -->
+        <img src="https://build.fhir.org/ig/HL7/cqf-recommendations/unified-activity-flow.png" alt="Clinical Workflow" class="workflow-image">
+        
+    </div>
+    
+    <script>
+        function submitPatientData() {
+            var patientName = document.getElementById('patientName').value;
+            var symptoms = document.getElementById('symptoms').value;
+            var conditions = document.getElementById('conditions').value;
+
+            // Implement your CPG logic here to generate a treatment plan
+            var treatment = 'Treatment recommendation will be provided here.';
+            // ... Your logic goes here ...
+
+            document.getElementById('treatmentPlan').innerHTML = '<h2>Treatment Plan for ' + patientName + '</h2><p>' + treatment + '</p>';
+        }
+    </script>
+</body>
+</html>
