@@ -5,53 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Doctor Portal - Allergic Rhinitis CPG Workflow</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #ecf0f1;
-            margin: 0;
-            padding: 0;
-        }
-        .container {
-            padding: 20px;
-            margin-top: 20px;
-        }
-        .workflow-image {
-            max-width: 100%;
-            height: auto;
-            display: block;
-            margin-top: 30px;
-        }
-        .treatment-plan, .patient-list {
-            background-color: #fff;
-            border: 1px solid #ccc;
-            padding: 15px;
-            margin-top: 30px;
-        }
-        .treatment-plan h2, .patient-list h2 {
-            color: #2c3e50;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        table, th, td {
-            border: 1px solid #ddd;
-        }
-        th {
-            background-color: #4CAF50;
-            color: white;
-            padding: 8px;
-        }
-        td {
-            padding: 8px;
-            text-align: left;
-        }
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-        }
-        tr:hover {
-            background-color: #ddd;
-        }
+        /* Your existing CSS */
     </style>
 </head>
 <body>
@@ -60,25 +14,35 @@
 
         <div id="patientForm">
             <h2>Patient Information</h2>
-            <label for="patientName">Patient Name:</label>
-            <input type="text" id="patientName">
-            
-            <label for="symptoms">Symptoms:</label>
-            <input type="text" id="symptoms">
-            
+            <label for="patientNameSelect">Patient Name:</label>
+            <select id="patientNameSelect">
+                <!-- Add other patients as options -->
+                <option value="John Doe">John Doe</option>
+                <option value="Emily Smith">Emily Smith</option>
+                <!-- Add more patients based on your list -->
+            </select>
+
+            <label for="symptomsSelect">Symptoms:</label>
+            <select id="symptomsSelect">
+                <!-- Add other symptoms as options -->
+                <option value="Sneezing">Sneezing</option>
+                <option value="Nasal Congestion">Nasal Congestion</option>
+                <!-- Add more symptoms based on your list -->
+            </select>
+
             <label for="severity">Severity:</label>
             <select id="severity">
                 <option value="mild">Mild</option>
                 <option value="moderate">Moderate</option>
                 <option value="severe">Severe</option>
             </select>
-            
+
             <button onclick="generateTreatmentPlan()">Generate Treatment Plan</button>
         </div>
 
         <div id="treatmentPlan" class="treatment-plan">
             <h2>Treatment Plan</h2>
-            <p>Recommended treatment plan will be displayed here based on the patient's information.</p>
+            <p id="treatmentContent">Recommended treatment plan will be displayed here based on the patient's information.</p>
         </div>
 
         <div id="patientList" class="patient-list">
@@ -89,6 +53,8 @@
                     <th>Symptoms</th>
                     <th>Severity</th>
                 </tr>
+                <!-- Sample Patient Data -->
+                <!-- Repeat for the number of patients you have -->
                 <!-- Sample Patient Data -->
                 <tr><td>Liam Taylor</td><td>Runny Nose, Sneezing</td><td>Allergies</td></tr>
                 <tr><td>Noah Evans</td><td>Watery Eyes, Congestion</td><td>-</td></tr>
@@ -116,40 +82,44 @@
                 <tr><td>John Scott</td><td>Cough, Itchy Eyes</td><td>-</td></tr>
                 <tr><td>Owen Green</td><td>Runny Nose, Sneezing</td><td>-</td></tr>
                 <!-- Additional patient rows have been omitted for brevity -->
+                <!-- Patient list rows go here -->
             </table>
         </div>
 
         <img src="https://build.fhir.org/ig/HL7/cqf-recommendations/unified-activity-flow.png" alt="Clinical Workflow" class="workflow-image">
-        
     </div>
-    
+
     <script>
         function generateTreatmentPlan() {
-            var patientName = document.getElementById('patientName').value || "Unnamed Patient";
-            var symptoms = document.getElementById('symptoms').value || "No symptoms provided";
-            var severity = document.getElementById('severity').value || "mild";
+            var patientName = document.getElementById('patientNameSelect').value;
+            var symptoms = document.getElementById('symptomsSelect').value;
+            var severity = document.getElementById('severity').value;
             var treatment;
 
             switch(severity) {
                 case 'mild':
-                    treatment = 'Recommendation: Over-the-counter antihistamines.';
+                    treatment = 'Over-the-counter antihistamines';
                     break;
                 case 'moderate':
-                    treatment = 'Recommendation: Intranasal corticosteroids and antihistamines.';
+                    treatment = 'Intranasal corticosteroids and antihistamines';
                     break;
                 case 'severe':
-                    treatment = 'Recommendation: Allergy immunotherapy in consultation with a specialist.';
+                    treatment = 'Allergy immunotherapy in consultation with a specialist';
                     break;
                 default:
-                    treatment = 'Unable to provide a recommendation.';
+                    treatment = 'Consultation with a healthcare provider';
             }
 
-            document.getElementById('treatmentPlan').innerHTML = `
-                <h2>Treatment Plan for ${patientName}</h2>
-                <p>${patientName} reports ${symptoms}. Based on a ${severity} severity assessment, ${treatment}</p>
-                <p>Follow-up appointment scheduled in 4 weeks.</p>
-            `;
+            document.getElementById('treatmentContent').textContent =
+                `Treatment Plan for ${patientName}: Based on the symptoms of ${symptoms} and a severity of ${severity}, the recommendation is ${treatment}. Follow-up appointment scheduled in 4 weeks.`;
         }
+
+        // Set the default values for the form fields on window load
+        window.onload = function() {
+            document.getElementById('patientNameSelect').value = 'John Doe'; // Set default patient
+            document.getElementById('symptomsSelect').value = 'Sneezing'; // Set default symptom
+        };
     </script>
 </body>
 </html>
+
