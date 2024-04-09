@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergic Rhinitis Assessment Results</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        p {
+            color: #666;
+        }
+        .recommendations {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .recommendations h3 {
+            color: #333;
+        }
+        .recommendation-item {
+            margin-bottom: 10px;
+        }
+        .back-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Assessment Complete</h2>
+        <p>Thank you for completing the allergic rhinitis self-assessment questionnaire.</p>
+        <div class="recommendations">
+            <h3>General Recommendations:</h3>
+            <div class="recommendation-item">- Monitor and avoid known allergens as much as possible.</div>
+            <div class="recommendation-item">- Consider using over-the-counter antihistamines for relief.</div>
+            <div class="recommendation-item">- Regularly clean living spaces to reduce allergen exposure.</div>
+            <div class="recommendation-item">- Consult with a healthcare provider for personalized advice and treatment options.</div>
+        </div>
+        <a href="index.html" class="back-button">Back to Home</a>
+    </div>
+
+    <script>
+        // Example JavaScript for handling further interactions or analytics
+    </script>
+</body>
+</html>
