@@ -37,16 +37,20 @@
         table, th, td {
             border: 1px solid #ddd;
         }
-        th, td {
-            padding: 8px;
-            text-align: left;
-        }
         th {
             background-color: #4CAF50;
             color: white;
+            padding: 8px;
+        }
+        td {
+            padding: 8px;
+            text-align: left;
         }
         tr:nth-child(even) {
             background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
         }
     </style>
 </head>
@@ -57,22 +61,24 @@
         <div id="patientForm">
             <h2>Patient Information</h2>
             <label for="patientName">Patient Name:</label>
-            <input type="text" id="patientName" value="John Doe">
+            <input type="text" id="patientName">
             
             <label for="symptoms">Symptoms:</label>
-            <select id="symptoms">
-                <option value="sneezing">Sneezing</option>
-                <option value="nasalCongestion" selected>Nasal Congestion</option>
-                <!-- Add other symptoms as needed -->
+            <input type="text" id="symptoms">
+            
+            <label for="severity">Severity:</label>
+            <select id="severity">
+                <option value="mild">Mild</option>
+                <option value="moderate">Moderate</option>
+                <option value="severe">Severe</option>
             </select>
             
-            <label for="conditions">Comorbid Conditions:</label>
-            <select id="conditions">
-                <option value="asthma" selected>Asthma</option>
-                <!-- Add other conditions as needed -->
-            </select>
-            
-            <button onclick="submitPatientData()">Submit Patient Data</button>
+            <button onclick="generateTreatmentPlan()">Generate Treatment Plan</button>
+        </div>
+
+        <div id="treatmentPlan" class="treatment-plan">
+            <h2>Treatment Plan</h2>
+            <p>Recommended treatment plan will be displayed here based on the patient's information.</p>
         </div>
 
         <div id="patientList" class="patient-list">
@@ -81,17 +87,9 @@
                 <tr>
                     <th>Name</th>
                     <th>Symptoms</th>
-                    <th>Conditions</th>
+                    <th>Severity</th>
                 </tr>
                 <!-- Sample Patient Data -->
-                <!-- Repeat similar <tr> tags for each patient -->
-                <tr>
-                    <td>Jane Smith</td>
-                    <td>Runny Nose, Sneezing</td>
-                    <td>None</td>
-                </tr>
-                <!-- Add more sample patients here -->
-                 <!-- Add more patients below -->
                 <tr><td>Alice Johnson</td><td>Runny Nose, Sneezing</td><td>-</td></tr>
                 <tr><td>Bob Smith</td><td>Nasal Congestion</td><td>Eczema</td></tr>
                 <tr><td>Carol White</td><td>Coughing, Itchy Eyes</td><td>-</td></tr>
@@ -116,31 +114,40 @@
                 <tr><td>Frank Moore</td><td>Nasal Congestion, Sneezing</td><td>Asthma</td></tr>
                 <tr><td>Grace Lee</td><td>Runny Nose</td><td>-</td></tr>
                 <tr><td>Henry Wilson</td><td>Sneezing, Coughing</td><td>Chronic Bronchitis</td></tr>
-                <!-- Continue adding patients as needed -->
+                <!-- Additional patient rows have been omitted for brevity -->
             </table>
         </div>
 
-        <div id="treatmentPlan" class="treatment-plan">
-            <h2>Treatment Plan</h2>
-            <!-- The treatment plan will be displayed here after patient data is submitted -->
-        </div>
-
-        <!-- Responsive Clinical Workflow Diagram -->
         <img src="https://build.fhir.org/ig/HL7/cqf-recommendations/unified-activity-flow.png" alt="Clinical Workflow" class="workflow-image">
         
     </div>
     
     <script>
-        function submitPatientData() {
-            var patientName = document.getElementById('patientName').value;
-            var symptoms = document.getElementById('symptoms').value;
-            var conditions = document.getElementById('conditions').value;
+        function generateTreatmentPlan() {
+            var patientName = document.getElementById('patientName').value || "Unnamed Patient";
+            var symptoms = document.getElementById('symptoms').value || "No symptoms provided";
+            var severity = document.getElementById('severity').value || "mild";
+            var treatment;
 
-            // Implement your CPG logic here to generate a treatment plan
-            var treatment = 'Treatment recommendation will be provided here.';
-            // ... Your logic goes here ...
+            switch(severity) {
+                case 'mild':
+                    treatment = 'Recommendation: Over-the-counter antihistamines.';
+                    break;
+                case 'moderate':
+                    treatment = 'Recommendation: Intranasal corticosteroids and antihistamines.';
+                    break;
+                case 'severe':
+                    treatment = 'Recommendation: Allergy immunotherapy in consultation with a specialist.';
+                    break;
+                default:
+                    treatment = 'Unable to provide a recommendation.';
+            }
 
-            document.getElementById('treatmentPlan').innerHTML = '<h2>Treatment Plan for ' + patientName + '</h2><p>' + treatment + '</p>';
+            document.getElementById('treatmentPlan').innerHTML = `
+                <h2>Treatment Plan for ${patientName}</h2>
+                <p>${patientName} reports ${symptoms}. Based on a ${severity} severity assessment, ${treatment}</p>
+                <p>Follow-up appointment scheduled in 4 weeks.</p>
+            `;
         }
     </script>
 </body>
