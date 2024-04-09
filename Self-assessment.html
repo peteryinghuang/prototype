@@ -186,5 +186,17 @@
             alert('Submit button clicked!');
         }
     </script>
+
+    <script>
+    document.getElementById('allergySurvey').onsubmit = function(event) {
+        event.preventDefault(); // 阻止表单的默认提交行为
+
+        // 这里可以添加你的验证逻辑或其他代码
+
+        // 页面跳转到新的URL
+        window.location.href = 'SurveyComplete.html'; // 替换'your-new-page.html'为你的目标页面URL
+    };
+</script>
+
 </body>
 </html>
