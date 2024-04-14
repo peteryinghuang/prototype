@@ -92,7 +92,7 @@
 
     <div class="nav-bar">
         <a href="#home" class="active">Home</a>
-        <a href="#forum">Forum</a>
+        <a href="ForumList.html">Forum</a>
         <a href="#education">Education</a>
         <a href="#profile">Profile</a>
     </div>
@@ -107,7 +107,8 @@
             <input type="text" id="topicTitle">
             <label for="postText">Post:</label>
             <textarea id="postText" rows="6"></textarea>
-            <button onclick="alert('This is a static prototype. In a real forum, your post would be submitted.')">Submit Post</button>
+            <button type="button" id="submitPost">Submit Post</button>         
+            <!- <button onclick="alert('This is a static prototype. In a real forum, your post would be submitted.')">Submit Post</button> ->
         </div>
         
         <!-- Placeholder for actual forum posts -->
@@ -121,6 +122,15 @@
         <p>Contact Us: info@allergicrhinitisforum.com</p>
     </footer>
 
+
+</div>
+
+<script>
+    document.getElementById('submitPost').onclick = function() {
+        // 假设这里有你验证表单数据存在性和有效性的代码
+        window.location.href = 'Survey Complete.html';
+    };
+</script>
     <script>
         // Simple script to toggle active class on navigation bar
         var navLinks = document.querySelectorAll('.nav-bar a');
