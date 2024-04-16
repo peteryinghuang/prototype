@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allergic Rhinitis Knowledge Base</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        header { background-color: #4CAF50; color: white; padding: 10px; text-align: center; }
+        nav { background: #333; color: white; padding: 10px; }
+        nav ul { list-style-type: none; }
+        nav ul li { display: inline; margin-right: 20px; }
+        nav a { color: white; text-decoration: none; }
+        main { padding: 20px; }
+        .search-bar { margin-bottom: 20px; }
+        .article { margin-bottom: 20px; }
+        footer { background-color: #333; color: white; text-align: center; padding: 10px; }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Allergic Rhinitis Knowledge Base</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Symptom Guide</a></li>
+        <li><a href="#">Treatment Options</a></li>
+        <li><a href="#">Community Forum</a></li>
+    </ul>
+</nav>
+
+<main>
+    <div class="search-bar">
+        <input type="text" id="searchQuery" placeholder="Search for articles, symptoms, treatments..." />
+        <button onclick="search()">Search</button>
+    </div>
+
+    <article class="article" id="intro">
+        <h2>Understanding Allergic Rhinitis</h2>
+        <p>Allergic rhinitis is a type of inflammation in the nose which occurs when the immune system overreacts to allergens in the air. This section helps you understand the basics of this condition.</p>
+    </article>
+
+    <article class="article" id="symptoms">
+        <h2>Recognizing Symptoms</h2>
+        <p>Identify the common and uncommon symptoms of allergic rhinitis to better understand and manage your condition.</p>
+    </article>
+
+    <article class="article" id="treatments">
+        <h2>Treatment Options</h2>
+        <p>Explore the various treatment options available for managing allergic rhinitis, including both medicinal and home remedies.</p>
+    </article>
+
+    <article class="article" id="living-with">
+        <h2>Living with Allergic Rhinitis</h2>
+        <p>Get tips and advice for coping with allergic rhinitis in your daily life, including changes to environment and habits that can help.</p>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; 2024 AllerTrack. All rights reserved.</p>
+</footer>
+
+<script>
+    // Placeholder for search function
+    function search() {
+        var query = document.getElementById('searchQuery').value;
+        alert('Search for: ' + query);
+        // Here would go the actual search logic or API call.
+    }
+</script>
+
+</body>
+</html>
