@@ -21,22 +21,36 @@
         }
         input[type="date"],
         select,
+        input[type="range"],
         button {
             padding: 10px;
             margin: 10px 0;
             width: 100%;
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-collapse: collapse;
+        }
+        th, td {
+            text-align: left;
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Allergic Rhinitis Symptom Tracker</h1>
-        <form>
+        <form id="symptomForm">
             <label for="date">Date:</label>
-            <input type="date" id="date" name="date">
+            <input type="date" id="date" name="date" required>
             
             <label for="symptoms">Symptoms:</label>
-            <select id="symptoms" name="symptoms">
+            <select id="symptoms" name="symptoms" required>
                 <option value="sneezing">Sneezing</option>
                 <option value="congestion">Nasal Congestion</option>
                 <option value="runny_nose">Runny Nose</option>
@@ -47,9 +61,45 @@
             <label for="severity">Severity (1-10):</label>
             <input type="range" id="severity" name="severity" min="1" max="10">
             
-            <button type="submit">Log Symptom</button>
+            <button type="button" onclick="logSymptom()">Log Symptom</button>
         </form>
-        <!-- Here you could add a script to handle form submission and data visualization -->
+        
+        <table id="logTable">
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Symptom</th>
+                    <th>Severity</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Log entries will go here -->
+            </tbody>
+        </table>
     </div>
+    
+    <script>
+        function logSymptom() {
+            var date = document.getElementById('date').value;
+            var symptom = document.getElementById('symptoms').value;
+            var severity = document.getElementById('severity').value;
+            
+            // Check if the date is filled out
+            if (!date) {
+                alert("Please select a date.");
+                return;
+            }
+            
+            // Insert a new row at the end of the table
+            var table = document.getElementById('logTable').getElementsByTagName('tbody')[0];
+            var newRow = table.insertRow();
+            var cell1 = newRow.insertCell(0);
+            var cell2 = newRow.insertCell(1);
+            var cell3 = newRow.insertCell(2);
+            cell1.textContent = date;
+            cell2.textContent = symptom;
+            cell3.textContent = severity;
+        }
+    </script>
 </body>
 </html>
