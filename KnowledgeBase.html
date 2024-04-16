@@ -38,27 +38,106 @@
         <button onclick="search()">Search</button>
     </div>
 
-    <article class="article" id="intro">
-        <h2>Understanding Allergic Rhinitis</h2>
-        <p>Allergic rhinitis is a type of inflammation in the nose which occurs when the immune system overreacts to allergens in the air. This section helps you understand the basics of this condition.</p>
-    </article>
 
-    <article class="article" id="symptoms">
-        <h2>Recognizing Symptoms</h2>
-        <p>Identify the common and uncommon symptoms of allergic rhinitis to better understand and manage your condition.</p>
-    </article>
 
-    <article class="article" id="treatments">
-        <h2>Treatment Options</h2>
-        <p>Explore the various treatment options available for managing allergic rhinitis, including both medicinal and home remedies.</p>
-    </article>
+    <title>Allergic Rhinitis Knowledge Graph</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <style>
+        #mynetwork {
+            width: 600px;
+            height: 400px;
+            border: 1px solid lightgray;
+        }
+        p {
+            max-width: 600px;
+        }
+    </style>
+</head>
+<body>
 
-    <article class="article" id="living-with">
-        <h2>Living with Allergic Rhinitis</h2>
-        <p>Get tips and advice for coping with allergic rhinitis in your daily life, including changes to environment and habits that can help.</p>
-    </article>
-</main>
+<h2>Allergic Rhinitis Knowledge Graph</h2>
+<p>Explore the knowledge graph by clicking on the nodes related to symptoms, treatments, and triggers of allergic rhinitis.</p>
 
+<div id="mynetwork"></div>
+
+<script type="text/javascript">
+  // Create a mock network data
+  var nodes = new vis.DataSet([
+    {id: 1, label: 'Allergic Rhinitis', group: 'condition'},
+    {id: 2, label: 'Symptoms', group: 'category'},
+    {id: 3, label: 'Treatments', group: 'category'},
+    {id: 4, label: 'Sneezing', group: 'symptom'},
+    {id: 5, label: 'Nasal Congestion', group: 'symptom'},
+    {id: 6, label: 'Antihistamines', group: 'treatment'},
+    {id: 7, label: 'Nasal Sprays', group: 'treatment'},
+    // ... other nodes
+  ]);
+
+  // create an array with edges
+  var edges = new vis.DataSet([
+    {from: 1, to: 2},
+    {from: 1, to: 3},
+    {from: 2, to: 4},
+    {from: 2, to: 5},
+    {from: 3, to: 6},
+    {from: 3, to: 7},
+    // ... other edges
+  ]);
+
+  // create a network
+  var container = document.getElementById('mynetwork');
+  var data = {
+    nodes: nodes,
+    edges: edges
+  };
+  var options = {
+    groups: {
+      condition: {color:{background:'red'}, borderWidth:3},
+      category: {color:{background:'yellow'}, borderWidth:3},
+      symptom: {color:{background:'blue'}, borderWidth:3},
+      treatment: {color:{background:'green'}, borderWidth:3},
+    }
+  };
+  var network = new vis.Network(container, data, options);
+
+  // Add interaction
+  network.on("click", function (params) {
+    params.event = "[original event]";
+    if (params.nodes.length == 1) {
+        var nodeId = params.nodes[0];
+        var node = nodes.get(nodeId);
+        alert('Clicked on node: ' + node.label);
+        // Perform search or display information based on the node label
+    }
+  });
+</script>
+<h2>Allergic Rhinitis Knowledge Content</h2>
+<p>Below is a list of articles and information related to allergic rhinitis.</p>
+
+<table border="1" style="width:100%">
+    <tr>
+        <th>Category</th>
+        <th>Title</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>Symptom</td>
+        <td>Sneezing and Allergic Rhinitis</td>
+        <td>Detailed information on how sneezing is related to allergic rhinitis and what it might indicate about the condition.</td>
+    </tr>
+    <tr>
+        <td>Treatment</td>
+        <td>Using Antihistamines Safely</td>
+        <td>An in-depth look at antihistamines and how they can be used to manage symptoms of allergic rhinitis.</td>
+    </tr>
+    <tr>
+        <td>Trigger</td>
+        <td>Pollen and Allergies</td>
+        <td>Understanding how pollen triggers allergic rhinitis and methods to reduce exposure.</td>
+    </tr>
+    <!-- ... 更多行 -->
+</table>
 <footer>
     <p>&copy; 2024 AllerTrack. All rights reserved.</p>
 </footer>
@@ -71,6 +150,6 @@
         // Here would go the actual search logic or API call.
     }
 </script>
-
+</main>
 </body>
 </html>
