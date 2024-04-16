@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Allergic Rhinitis Symptom Tracker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+        h1 {
+            color: #005a9c;
+        }
+        form {
+            background-color: #f2f2f2;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        input[type="date"],
+        select,
+        button {
+            padding: 10px;
+            margin: 10px 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Allergic Rhinitis Symptom Tracker</h1>
+        <form>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date">
+            
+            <label for="symptoms">Symptoms:</label>
+            <select id="symptoms" name="symptoms">
+                <option value="sneezing">Sneezing</option>
+                <option value="congestion">Nasal Congestion</option>
+                <option value="runny_nose">Runny Nose</option>
+                <option value="itchy_eyes">Itchy Eyes</option>
+                <!-- Add as many symptoms as needed -->
+            </select>
+            
+            <label for="severity">Severity (1-10):</label>
+            <input type="range" id="severity" name="severity" min="1" max="10">
+            
+            <button type="submit">Log Symptom</button>
+        </form>
+        <!-- Here you could add a script to handle form submission and data visualization -->
+    </div>
+</body>
+</html>
